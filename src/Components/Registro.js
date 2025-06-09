@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import { FormattedMessage } from "react-intl";
 import "./Registro.css";
-import fondo from "../Images/registro-mujer.webp"; // 👈 Importa la imagen
+import fondo from "../Images/registro-mujer.webp";
 
 function Registro() {
   const [formData, setFormData] = useState({
@@ -21,7 +22,7 @@ function Registro() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (formData.contrasena !== formData.confirmarContrasena) {
-      alert("Las contraseñas no coinciden");
+      alert("Las contraseñas no coinciden"); // Puedes traducir este texto también si quieres
       return;
     }
     console.log("Datos del formulario:", formData);
@@ -38,44 +39,61 @@ function Registro() {
       {/* Formulario */}
       <div className="registro-right">
         <form onSubmit={handleSubmit} className="registro-form">
-          <h2>Registrarse</h2>
-          <label>Nombre de usuario:</label>
+          <h2>
+            <FormattedMessage id="registro.titulo" defaultMessage="Registrarse" />
+          </h2>
+
+          <label htmlFor="username">
+            <FormattedMessage id="registro.usuario" defaultMessage="Nombre de usuario" />
+          </label>
           <input
             type="text"
             name="username"
+            id="username"
             value={formData.username}
             onChange={handleChange}
             required
           />
 
-          <label>Correo:</label>
+          <label htmlFor="correo">
+            <FormattedMessage id="registro.correo" defaultMessage="Correo" />
+          </label>
           <input
             type="email"
             name="correo"
+            id="correo"
             value={formData.correo}
             onChange={handleChange}
             required
           />
 
-          <label>Contraseña:</label>
+          <label htmlFor="contrasena">
+            <FormattedMessage id="registro.contrasena" defaultMessage="Contraseña" />
+          </label>
           <input
             type="password"
             name="contrasena"
+            id="contrasena"
             value={formData.contrasena}
             onChange={handleChange}
             required
           />
 
-          <label>Confirmar contraseña:</label>
+          <label htmlFor="confirmarContrasena">
+            <FormattedMessage id="registro.confirmar" defaultMessage="Confirmar contraseña" />
+          </label>
           <input
             type="password"
             name="confirmarContrasena"
+            id="confirmarContrasena"
             value={formData.confirmarContrasena}
             onChange={handleChange}
             required
           />
 
-          <button type="submit">Registrarse</button>
+          <button type="submit">
+            <FormattedMessage id="registro.boton" defaultMessage="Registrarse" />
+          </button>
         </form>
       </div>
     </div>

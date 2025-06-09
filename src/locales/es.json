@@ -39,6 +39,18 @@
     "productores.volver": "Volver",
     "productores.calificar": "Calificar Productor",
     "productores.comentario.placeholder": "Escribe tu comentario aquí...",
-    "productores.calificar.boton": "Calificar"
+    "productores.calificar.boton": "Calificar",
+    "login.titulo": "Iniciar Sesión",
+"login.usuario": "Nombre de usuario",
+"login.contrasena": "Contraseña",
+"login.boton": "Ingresar",
+"registro.titulo": "Registrarse",
+"registro.usuario": "Nombre de usuario",
+"registro.correo": "Correo",
+"registro.contrasena": "Contraseña",
+"registro.confirmar": "Confirmar contraseña",
+"registro.boton": "Registrarse"
+
+
 
 }

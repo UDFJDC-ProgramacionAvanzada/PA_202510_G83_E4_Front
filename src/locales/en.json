@@ -39,7 +39,19 @@
     "productores.volver": "Back",
     "productores.calificar": "Rate Producer",
     "productores.comentario.placeholder": "Write your comment here...",
-    "productores.calificar.boton": "Rate"
+    "productores.calificar.boton": "Rate",
+    "login.titulo": "Login",
+"login.usuario": "Username",
+"login.contrasena": "Password",
+"login.boton": "Login",
+"registro.titulo": "Sign Up",
+"registro.usuario": "Username",
+"registro.correo": "Email",
+"registro.contrasena": "Password",
+"registro.confirmar": "Confirm password",
+"registro.boton": "Register"
+
+
 
 }
 
