@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "nombre": "Organic Coffee from Nariño",
+    "categoria": "Beverages",
+    "precio": 25000,
+    "foto": "https://cafearabo.com/wp-content/uploads/2024/01/paquete-cafe-en-grano-Atelier-mezcla-natural.jpg",
+    "descripcion": "Coffee grown in the mountains of Nariño, 100% organic with an intense aroma. Ideal for those who appreciate an authentic and sustainable flavor."
+  },
+  {
+    "id": 2,
+    "nombre": "Artisanal Panela",
+    "categoria": "Food",
+    "precio": 10000,
+    "foto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdzqcu7O9gFREybWXWPMzvh8xUInfuVD3Zcw&s",
+    "descripcion": "Blocks of panela handcrafted by farming families in Huila. Natural sweetener with no additives, perfect for drinks or desserts."
+  },
+  {
+    "id": 3,
+    "nombre": "Iraca Palm Basket",
+    "categoria": "Handicrafts",
+    "precio": 35000,
+    "foto": "https://artesaniasdecolombiatienda.com.co/wp-content/uploads/2023/12/02-02-640-E_vista1-1.jpg",
+    "descripcion": "Handmade by artisans from Colombia's Caribbean coast. Ideal for decorating or storing products with a traditional and cultural touch."
+  },
+  {
+    "id": 4,
+    "nombre": "Natural Bee Honey",
+    "categoria": "Processed Foods",
+    "precio": 18000,
+    "foto": "https://berrybloom.com.co/wp-content/uploads/2020/11/BERRYBLOOM-32-scaled.jpg",
+    "descripcion": "Harvested from apiaries in Tolima. Pure honey with no additives, perfect for naturally sweetening and boosting your defenses."
+  },
+  {
+    "id": 5,
+    "nombre": "Cargamanto Beans",
+    "categoria": "Legumes",
+    "precio": 12000,
+    "foto": "https://terrapremiummarket.co/wp-content/uploads/2024/02/frijoles.webp",
+    "descripcion": "Grown without pesticides in Boyacá. Handpicked and packed by local farmers."
+  },
+  {
+    "id": 6,
+    "nombre": "Traditional Vueltiao Hat",
+    "categoria": "Handicrafts",
+    "precio": 50000,
+    "foto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNNfKdYEUJ9kl8XR_kQjY4qsHNN4fxq3QpVg&s",
+    "descripcion": "Symbol of Colombian folklore, handmade by artisans from Córdoba. Perfect to proudly showcase our culture."
+  }
+]

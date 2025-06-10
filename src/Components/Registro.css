@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Maven Pro', sans-serif;
+}
+
+.registro-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #D5CEA3;
+  min-height: 100vh;
+  font-family: 'Maven Pro', sans-serif;
+}
+
+.registro-form {
+  background-color: #3C2A21;
+  color: #fff;
+  padding: 50px;
+  border-radius: 20px;
+  width: 400px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px; 
+}
+
+
+.registro-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.registro-form label {
+  align-self: flex-start; 
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.registro-form input {
+  width: 100%;
+  padding: 10px;
+  background-color: #d8c99b;
+  color: #3e2c1b;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.registro-form button {
+  width: 50%; 
+  background-color: #1A120B;
+  color: #fff;
+  border: none;
+  padding: 8px 0;
+  margin-top: 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.registro-form button:hover {
+  background-color: #222;
+}
+.fondo-desenfocado {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('../Images/registro-mujer.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  filter: blur(2px);
+  z-index: 0;
+  opacity: 0.6;
+  transform: translateY(1%); 
+}
+
+
+
+.registro-form {
+  position: relative;
+  z-index: 1;
+  background-color: rgba(60, 42, 33, 0.95);
+}
+
+.registro-form select {
+  width: 100%;
+  padding: 10px;
+  background-color: #d8c99b;
+  color: #3e2c1b;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg fill='%233e2c1b' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px 16px;
+  margin-top: 5px;
+  padding-right: 2rem; 
+}
+

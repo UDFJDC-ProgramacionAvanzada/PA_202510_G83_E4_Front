@@ -1,6 +1,7 @@
 // src/Components/ProductorCard.js
 import React from "react";
 import { Link } from "react-router-dom";
+import { FormattedMessage } from "react-intl";
 import "./Productores.css";
 
 function ProductorCard({ productor }) {
@@ -8,7 +9,7 @@ function ProductorCard({ productor }) {
     <div className="productor-card">
       <h3>{productor.nombre}</h3>
       <p className="productor-ubicacion">
-        <strong>Ubicación:</strong> {productor.ubicacion}
+        <strong><FormattedMessage id="productores.ubicacion" />:</strong> {productor.ubicacion}
       </p>
       {productor.foto ? (
         <img
@@ -23,7 +24,7 @@ function ProductorCard({ productor }) {
       )}
       <p className="productor-descripcion">{productor.descripcion}</p>
       <Link to={`/productores/${productor.id}`} className="btn-compra">
-        Calificar
+        <FormattedMessage id="productores.calificar.boton" />
       </Link>
     </div>
   );

@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "nombre": "María López",
+    "ubicacion": "Córdoba",
+    "descripcion": "Expert artisan in Vueltiao hats and other traditional pieces made of palm.",
+    "foto": "https://www.artesaniasdecolombia.com.co/Documentos/Contenido/40659_comunidad-niwi-umuke-artesanias-colombian-2022-p.jpg"
+  },
+  {
+    "id": 2,
+    "nombre": "José Martínez",
+    "ubicacion": "Boyacá",
+    "descripcion": "Farmer dedicated to sustainable agriculture and wool weaving.",
+    "foto": "https://usil-blog.s3.amazonaws.com/PROD/blog/image/iStock-990488122.jpg"
+  },
+  {
+    "id": 3,
+    "nombre": "Rosa Morales",
+    "ubicacion": "Nariño",
+    "descripcion": "Producer of organic coffee and artisan wood and ceramic crafts.",
+    "foto": "https://www.gob.mx/cms/uploads/article/main_image/2289/La-roya-una-amenaza-para-el-cafe-por-el-calentamiento-global__1_.jpg"
+  },
+  {
+    "id": 4,
+    "nombre": "Carlos Ramírez",
+    "ubicacion": "Tolima",
+    "descripcion": "Beekeeper and craftsman who produces natural honey and woven baskets.",
+    "foto": "https://www.apinfiore.com/wp-content/uploads/2023/05/apicoltore-1024x1024.jpg"
+  },
+  {
+    "id": 5,
+    "nombre": "Ana Torres",
+    "ubicacion": "Colombian Caribbean",
+    "descripcion": "Craftswoman who makes baskets, mochilas, and traditional woven items from the region.",
+    "foto": "https://thumbs.dreamstime.com/b/mujer-tejedora-detr%C3%A1s-de-un-telar-y-alfombras-fabricaci%C3%B3n-artesanal-hecho-mano-en-madera-bali-indonesia-sep-que-fabrica-tela-181519633.jpg"
+  },
+  {
+    "id": 6,
+    "nombre": "Luis Herrera",
+    "ubicacion": "Huila",
+    "descripcion": "Farmer dedicated to the artisanal production of panela and bamboo crafts.",
+    "foto": "https://turismoeneltambo.com/wp-content/uploads/2021/03/trapiche-1.jpg"
+  }
+]

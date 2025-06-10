@@ -1,5 +1,5 @@
-// src/Components/Productos.js
 import React, { useEffect, useState } from "react";
+import { FormattedMessage } from "react-intl"; // 👈 Importamos FormattedMessage
 import ProductoCard from "./ProductoCard";
 import "./Productos.css";
 
@@ -10,9 +10,16 @@ function Productos() {
   const [carrito, setCarrito] = useState([]);
 
   useEffect(() => {
-    fetch(
-      "https://raw.githubusercontent.com/UDFJDC-ProgramacionAvanzada/PA_202510_G83_E4_Front/refs/heads/main/src/Mocks/Productos.json"
-    )
+    // 🔥 Aquí definimos el link para español y el hueco para inglés
+    const userLang = navigator.language || navigator.userLanguage;
+    let url;
+    if (userLang.startsWith("es")) {
+      url = "https://raw.githubusercontent.com/UDFJDC-ProgramacionAvanzada/PA_202510_G83_E4_Front/refs/heads/main/src/Mocks/Productos.json";
+    } else {
+      url = "https://raw.githubusercontent.com/DominicRobayod/PA_202510_G83_E4_Front/refs/heads/main/src/Mocks/EnProductos.json"; 
+    }
+
+    fetch(url)
       .then((res) => res.json())
       .then((data) => setProductos(data));
 
@@ -53,23 +60,38 @@ function Productos() {
 
   return (
     <div className="productos-container">
-      <h2 className="productos-titulo">Productos</h2>
+      <h2 className="productos-titulo">
+        <FormattedMessage id="productos.titulo" />
+      </h2>
       <div className="productos-filtros">
-        <input
-          type="text"
-          placeholder="Buscar por nombre o categoría..."
-          value={busqueda}
-          onChange={(e) => setBusqueda(e.target.value)}
-          className="input-busqueda"
-        />
-        <select
-          value={ordenPrecio}
-          onChange={(e) => setOrdenPrecio(e.target.value)}
-          className="select-precio"
-        >
-          <option value="none">Ordenar por precio</option>
-          <option value="asc">Menor a mayor</option>
-          <option value="desc">Mayor a menor</option>
+        <FormattedMessage id="productos.buscar.placeholder" defaultMessage="Buscar por nombre o categoría...">
+        {(placeholderText) => (
+          <input
+            type="text"
+            placeholder={placeholderText}
+            value={busqueda}
+            onChange={(e) => setBusqueda(e.target.value)}
+            className="input-busqueda"
+          />
+        )}
+</FormattedMessage>
+
+       <select
+        value={ordenPrecio}
+        onChange={(e) => setOrdenPrecio(e.target.value)}
+        className="select-precio"
+        id="ordenPrecio"
+        aria-label="Ordenar productos por precio"
+      >
+          <option value="none">
+            <FormattedMessage id="productos.ordenar" />
+          </option>
+          <option value="asc">
+            <FormattedMessage id="productos.menorMayor" />
+          </option>
+          <option value="desc">
+            <FormattedMessage id="productos.mayorMenor" />
+          </option>
         </select>
       </div>
       <section className="productos">

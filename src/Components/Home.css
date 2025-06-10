@@ -3,8 +3,8 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: calc(100vh - 100px); /* Resta altura de la navbar */
-  padding-top: 100px; /* Deja espacio para la navbar */
+  height: calc(100vh - 100px); 
+  padding-top: 100px; 
   position: relative;
   font-family: 'Maven Pro', sans-serif;
    overflow: hidden;
@@ -18,7 +18,6 @@
   z-index: 1;
 }
 
-/* Círculo de fondo que ocupa toda la esquina inferior izquierda */
 .circulo-decorativo {
   position: absolute;
   bottom: 0;
@@ -28,7 +27,7 @@
   background-color: #cf856b;
   border-top-right-radius: 100%;
   z-index: 0;
-  transform: translate(-20%, 20%); /* Ajusta la posición para evitar bordes visibles */
+  transform: translate(-20%, 20%); 
 }
 
 .artesanos-img {
@@ -42,7 +41,7 @@
   max-width: 40%;
   text-align: left;
   z-index: 2;
-  margin-top: -2rem; /* Levanta el contenido si estaba muy abajo */
+  margin-top: -2rem; 
 }
 
 .home-right h2 {
@@ -72,7 +71,7 @@
 
 .btns-container {
   display: flex;
-  gap: 1rem; /* Espacio entre botones */
+  gap: 1rem; 
   margin-top: 1.5rem;
 }
 
@@ -86,6 +85,6 @@
   border-radius: 25px;
   cursor: pointer;
   font-family: 'Maven Pro', sans-serif;
-  text-decoration: none; /* 👈 Quita subrayado si es un Link */
-  display: inline-block;  /* 👈 Asegura que se comporte como botón */
+  text-decoration: none; 
+  display: inline-block;  
 }

@@ -1,5 +1,5 @@
-// src/Components/Carrito.js
 import React, { useEffect, useState } from "react";
+import { FormattedMessage } from "react-intl";
 import "./Productos.css";
 
 function Carrito() {
@@ -7,7 +7,30 @@ function Carrito() {
 
   useEffect(() => {
     const carritoGuardado = JSON.parse(localStorage.getItem("carrito")) || [];
-    setCarrito(carritoGuardado);
+    const userLang = navigator.language || navigator.userLanguage;
+
+    // This part of the code fetches product data based on the user's language.
+    // The URLs provided in the original code snippets seem to point to different repositories,
+    // which might lead to inconsistencies if not managed properly.
+    // For a unified approach, ensure both language versions of your product data
+    // are accessible from a consistent and reliable source.
+    const url = userLang.startsWith("es")
+      ? "https://raw.githubusercontent.com/UDFJDC-ProgramacionAvanzada/PA_202510_G83_E4_Front/main/src/Mocks/Productos.json"
+      : "https://raw.githubusercontent.com/DominicRobayod/PA_202510_G83_E4_Front/main/src/Mocks/EnProductos.json";
+
+    fetch(url)
+      .then((res) => res.json())
+      .then((productosTraducidos) => {
+        const carritoActualizado = carritoGuardado.map((item) => {
+          const actualizado = productosTraducidos.find((p) => p.id === item.id);
+          return actualizado ? { ...actualizado, cantidad: item.cantidad } : item;
+        });
+        setCarrito(carritoActualizado);
+      })
+      .catch((err) => {
+        console.error("Error al cargar productos:", err);
+        setCarrito(carritoGuardado); // Fallback if fetch fails
+      });
   }, []);
 
   const incrementarCantidad = (id) => {
@@ -47,20 +70,25 @@ function Carrito() {
 
   return (
     <div className="productos-container">
-      <h2 className="carrito-titulo">🛒 Carrito de Compras</h2>
+      <h2 className="carrito-titulo">
+        <FormattedMessage id="carrito.titulo" />
+      </h2>
+
       {carrito.length === 0 ? (
-        <p>No hay productos en el carrito.</p>
+        <p><FormattedMessage id="carrito.vacio" /></p>
       ) : (
         <>
-          {/* Cuadro flotante */}
           <div className="carrito-flotante">
             <p className="total-carrito">
-              <strong>Total:</strong> ${calcularTotal().toLocaleString()} COP
+              <strong><FormattedMessage id="carrito.total" />:</strong> ${calcularTotal().toLocaleString()} COP
             </p>
             <p className="cantidad-total">
-              <strong>Productos:</strong> {calcularCantidadTotal()}
+              <strong><FormattedMessage id="carrito.productos" />:</strong> {calcularCantidadTotal()}
             </p>
-            <button className="btn-volver" onClick={() => window.location.href = '/compra'}>Comprar</button>
+            {/* The merged part: using onClick to navigate */}
+            <button className="btn-volver" onClick={() => window.location.href = '/compra'}>
+              <FormattedMessage id="carrito.comprar" defaultMessage="Comprar" />
+            </button>
           </div>
 
           <section className="productos">
@@ -68,7 +96,7 @@ function Carrito() {
               <div key={index} className="producto-card">
                 <h3>{producto.nombre}</h3>
                 <p className="categoria">
-                  <strong>Categoría:</strong> {producto.categoria}
+                  <strong><FormattedMessage id="carrito.categoria" />:</strong> {producto.categoria}
                 </p>
                 <img
                   src={producto.foto}
@@ -81,7 +109,7 @@ function Carrito() {
                 </p>
                 <p className="descripcion">{producto.descripcion}</p>
                 <p>
-                  <strong>Cantidad:</strong> {producto.cantidad}
+                  <strong><FormattedMessage id="carrito.cantidad" />:</strong> {producto.cantidad}
                 </p>
                 <div className="botones-producto">
                   <button
@@ -100,7 +128,7 @@ function Carrito() {
                     className="boton-info"
                     onClick={() => eliminarProducto(producto.id)}
                   >
-                    Eliminar
+                    <FormattedMessage id="carrito.eliminar" />
                   </button>
                 </div>
               </div>
