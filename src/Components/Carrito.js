@@ -1,4 +1,3 @@
-// src/Components/Carrito.js
 import React, { useEffect, useState } from "react";
 import { FormattedMessage } from "react-intl";
 import "./Productos.css";
@@ -10,6 +9,11 @@ function Carrito() {
     const carritoGuardado = JSON.parse(localStorage.getItem("carrito")) || [];
     const userLang = navigator.language || navigator.userLanguage;
 
+    // This part of the code fetches product data based on the user's language.
+    // The URLs provided in the original code snippets seem to point to different repositories,
+    // which might lead to inconsistencies if not managed properly.
+    // For a unified approach, ensure both language versions of your product data
+    // are accessible from a consistent and reliable source.
     const url = userLang.startsWith("es")
       ? "https://raw.githubusercontent.com/UDFJDC-ProgramacionAvanzada/PA_202510_G83_E4_Front/main/src/Mocks/Productos.json"
       : "https://raw.githubusercontent.com/DominicRobayod/PA_202510_G83_E4_Front/main/src/Mocks/EnProductos.json";
@@ -25,7 +29,7 @@ function Carrito() {
       })
       .catch((err) => {
         console.error("Error al cargar productos:", err);
-        setCarrito(carritoGuardado); // Fallback si falla el fetch
+        setCarrito(carritoGuardado); // Fallback if fetch fails
       });
   }, []);
 
@@ -81,8 +85,9 @@ function Carrito() {
             <p className="cantidad-total">
               <strong><FormattedMessage id="carrito.productos" />:</strong> {calcularCantidadTotal()}
             </p>
-            <button className="btn-volver">
-              <FormattedMessage id="carrito.comprar" />
+            {/* The merged part: using onClick to navigate */}
+            <button className="btn-volver" onClick={() => window.location.href = '/compra'}>
+              <FormattedMessage id="carrito.comprar" defaultMessage="Comprar" />
             </button>
           </div>
 

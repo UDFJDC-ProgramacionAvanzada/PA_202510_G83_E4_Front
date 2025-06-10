@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FormattedMessage } from "react-intl"; // 👈 Importamos FormattedMessage
+import { FormattedMessage } from "react-intl"; // Importamos FormattedMessage
 import "./Navbar.css";
 import logo from "../Images/logo.png";
 import iniciarSesion from "../Images/iniciarsesion.png";
@@ -33,11 +33,13 @@ function Navbar() {
       </div>
       <div className="navbar-right">
         <img src={iniciarSesion} alt="Iniciar Sesión" className="icono-user" />
+        {/* Prioritizing the internationalized login link */}
         <Link to="/login">
           <FormattedMessage id="navbar.iniciarSesion" />
         </Link>
-        <Link to="/registro">
-          <FormattedMessage id="navbar.registrarse" />
+        {/* Giving an option to use the new registration form, keeping internationalization */}
+        <Link to="/formulario"> 
+          <FormattedMessage id="navbar.registrarse" defaultMessage="Registrarse" />
         </Link>
         <Link to="/carrito">
           <img src={carrito} alt="Carrito de Compras" className="icono-carrito" />

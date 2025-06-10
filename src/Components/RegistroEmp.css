@@ -1,0 +1,95 @@
+.formularioRegistro {
+  background-color: #d5cea3;
+  min-height: 100vh;
+  padding: 8rem 4rem 4rem;
+  box-sizing: border-box;
+  font-family: 'Maven Pro', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.formularioRegistro form {
+  background-color: #a06c3f;
+  color: white;
+  padding: 2rem 2.5rem;
+  border-radius: 2rem;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border: 2px solid #3c2a21;
+  width: 100%;
+  max-width: 500px;
+}
+
+.formularioRegistro label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.formularioRegistro input {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  box-sizing: border-box;
+}
+
+.formularioRegistro input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(60, 42, 33, 0.3);
+}
+
+.formularioRegistro .error {
+  color: #ffd5d5;
+  background-color: #5a3a2b;
+  padding: 0.7rem 1rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.formularioRegistro button {
+  background-color: #3c2a21;
+  color: white;
+  border: none;
+  padding: 0.7rem 2rem;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.formularioRegistro button:hover {
+  background-color: #5a3a2b;
+}
+
+.formularioRegistro pre {
+  background-color: #fff;
+  color: #333;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  white-space: pre-wrap;
+}
+
+textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+input[type="file"] {
+  background-color: white;
+  padding: 0.5rem;
+  border-radius: 10px;
+  font-size: 1rem;
+}

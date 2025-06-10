@@ -36,13 +36,17 @@ function Home() {
           >
             <FormattedMessage id="home.button.products" />
           </Link>
-          {/* ✅ Ahora redirige al registro */}
+          {/* Link to general registration */}
           <Link
             to="/registro"
             className="btn-compra"
             data-test-id="sell-button"
           >
             <FormattedMessage id="home.button.sell" />
+          </Link>
+          {/* Link to product specific registration */}
+          <Link to="/registro-producto" className="btn-compra">
+            Vender mis productos 
           </Link>
         </div>
       </div>
