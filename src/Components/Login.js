@@ -1,3 +1,4 @@
+// src/Components/Login.js
 import React, { useState } from "react";
 import { FormattedMessage } from "react-intl";
 import "./Login.css";
@@ -19,17 +20,22 @@ function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // ✅ Validación de campos vacíos con alerta
+    if (!formData.username || !formData.contrasena) {
+      alert("Por favor, completa todos los campos.");
+      return;
+    }
+
     console.log("Datos de inicio de sesión:", formData);
     // Aquí podrías agregar validaciones o conexión con backend
   };
 
   return (
     <div className="login-container">
-      {/* Semicírculo de fondo */}
       <div className="semi-circulo"></div>
 
       <div className="login-form-wrapper">
-        {/* Formulario */}
         <form onSubmit={handleSubmit} className="login-form">
           <h2>
             <FormattedMessage id="login.titulo" defaultMessage="Iniciar Sesión" />
@@ -64,7 +70,6 @@ function Login() {
           </button>
         </form>
 
-        {/* Imagen lateral */}
         <div className="imagen-lateral">
           <img src={fondo} alt="Mujer indígena" />
         </div>

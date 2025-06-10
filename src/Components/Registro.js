@@ -1,14 +1,18 @@
+// src/Components/Registro.js
 import React, { useState } from "react";
-import { FormattedMessage } from "react-intl";
+import { FormattedMessage, useIntl } from "react-intl";
 import "./Registro.css";
 import fondo from "../Images/registro-mujer.webp";
 
 function Registro() {
+  const intl = useIntl();
+
   const [formData, setFormData] = useState({
     username: "",
     correo: "",
     contrasena: "",
     confirmarContrasena: "",
+    tipoUsuario: "",
   });
 
   const handleChange = (e) => {
@@ -21,22 +25,28 @@ function Registro() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
     if (formData.contrasena !== formData.confirmarContrasena) {
-      alert("Las contraseñas no coinciden"); // Puedes traducir este texto también si quieres
+      alert(
+        intl.formatMessage({
+          id: "registro.error.contrasena",
+          defaultMessage: "Las contraseñas no coinciden",
+        })
+      );
       return;
     }
+
     console.log("Datos del formulario:", formData);
+    // Aquí puedes redirigir o mostrar mensaje de éxito
   };
 
   return (
     <div className="registro-container">
-      {/* Capa de fondo */}
       <div
         className="fondo-desenfocado"
         style={{ backgroundImage: `url(${fondo})` }}
       ></div>
 
-      {/* Formulario */}
       <div className="registro-right">
         <form onSubmit={handleSubmit} className="registro-form">
           <h2>
@@ -90,6 +100,30 @@ function Registro() {
             onChange={handleChange}
             required
           />
+
+          <label htmlFor="tipoUsuario">
+            <FormattedMessage id="registro.tipoUsuario" defaultMessage="Tipo de usuario" />
+          </label>
+          <select
+            name="tipoUsuario"
+            id="tipoUsuario"
+            value={formData.tipoUsuario}
+            onChange={handleChange}
+            required
+          >
+            <option value="">
+              {intl.formatMessage({
+                id: "registro.tipoUsuario.opcion",
+                defaultMessage: "Seleccione una opción",
+              })}
+            </option>
+            <option value="comprador">
+              <FormattedMessage id="registro.tipoUsuario.comprador" defaultMessage="Comprador" />
+            </option>
+            <option value="vendedor">
+              <FormattedMessage id="registro.tipoUsuario.vendedor" defaultMessage="Vendedor" />
+            </option>
+          </select>
 
           <button type="submit">
             <FormattedMessage id="registro.boton" defaultMessage="Registrarse" />

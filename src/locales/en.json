@@ -41,17 +41,30 @@
     "productores.comentario.placeholder": "Write your comment here...",
     "productores.calificar.boton": "Rate",
     "login.titulo": "Login",
-"login.usuario": "Username",
-"login.contrasena": "Password",
-"login.boton": "Login",
-"registro.titulo": "Sign Up",
-"registro.usuario": "Username",
-"registro.correo": "Email",
-"registro.contrasena": "Password",
-"registro.confirmar": "Confirm password",
-"registro.boton": "Register"
-
-
-
+    "login.usuario": "Username",
+    "login.contrasena": "Password",
+    "login.boton": "Login",
+    "registro.titulo": "Sign Up",
+    "registro.usuario": "Username",
+    "registro.correo": "Email",
+    "registro.contrasena": "Password",
+    "registro.confirmar": "Confirm password",
+    "registro.boton": "Register",
+    "registro.tipoUsuario": "User type",
+    "registro.tipoUsuario.opcion": "Select an option",
+    "registro.tipoUsuario.comprador": "Buyer",
+    "registro.tipoUsuario.vendedor": "Seller",
+    "registro.error.contrasena": "Passwords do not match",
+    "quienes.titulo": "Our Mission",
+    "quienes.descripcion1": "Kapchy Market was born to empower Colombian artisans by making it easy to sell their authentic products in a fair, digital marketplace.",
+    "quienes.vision": "Our Vision",
+    "quienes.descripcion2": "We dream of a Colombia where handcrafted work receives global recognition without technological or access barriers.",
+    "quienes.valores": "Our Values",
+    "quienes.valor1": "Authenticity",
+    "quienes.valor2": "Community",
+    "quienes.valor3": "Sustainability",
+    "productos.buscar.placeholder": "Search by name or category...",
+    "productos.calificacion": "Rating",
+    "productores.calificacion": "Rating"
 }
 

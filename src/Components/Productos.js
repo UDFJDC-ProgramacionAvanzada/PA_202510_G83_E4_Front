@@ -64,18 +64,25 @@ function Productos() {
         <FormattedMessage id="productos.titulo" />
       </h2>
       <div className="productos-filtros">
-        <input
-          type="text"
-          placeholder="Buscar por nombre o categoría..."
-          value={busqueda}
-          onChange={(e) => setBusqueda(e.target.value)}
-          className="input-busqueda"
-        />
-        <select
-          value={ordenPrecio}
-          onChange={(e) => setOrdenPrecio(e.target.value)}
-          className="select-precio"
-        >
+        <FormattedMessage id="productos.buscar.placeholder" defaultMessage="Buscar por nombre o categoría...">
+        {(placeholderText) => (
+          <input
+            type="text"
+            placeholder={placeholderText}
+            value={busqueda}
+            onChange={(e) => setBusqueda(e.target.value)}
+            className="input-busqueda"
+          />
+        )}
+</FormattedMessage>
+
+       <select
+        value={ordenPrecio}
+        onChange={(e) => setOrdenPrecio(e.target.value)}
+        className="select-precio"
+        id="ordenPrecio"
+        aria-label="Ordenar productos por precio"
+      >
           <option value="none">
             <FormattedMessage id="productos.ordenar" />
           </option>

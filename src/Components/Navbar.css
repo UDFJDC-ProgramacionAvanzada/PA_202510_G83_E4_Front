@@ -8,7 +8,7 @@
   display: flex;
   justify-content: space-between;
   padding: 1rem 2rem;
-  padding-right: 3rem; /* 👈 Extra padding para margen derecho */
+  padding-right: 3rem; 
   align-items: center;
   font-size: 1rem;
   font-family: 'Maven Pro', sans-serif;
@@ -32,7 +32,7 @@
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 1.5rem; /* Reduce separación */
+  gap: 1.5rem; 
 }
 
 .nav-links a {
@@ -44,7 +44,7 @@
 .navbar-right {
   display: flex;
   align-items: center;
-  gap: 1.2rem; /* 👈 Aumentado para mayor separación */
+  gap: 1.2rem; 
   flex-wrap: nowrap;
   white-space: nowrap;
 }
@@ -54,7 +54,7 @@
   color: white;
   text-decoration: none;
   font-weight: bold;
-  font-size: 0.95rem; /* Más compacto */
+  font-size: 0.95rem;
 }
 
 .icono-user {

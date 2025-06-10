@@ -6,6 +6,8 @@ import "./Productos.css";
 function ProductoDetail() {
   const { productoId } = useParams();
   const [producto, setProducto] = useState(null);
+  const [calificacion, setCalificacion] = useState(1);
+  const [comentario, setComentario] = useState("");
   const intl = useIntl();
 
   useEffect(() => {
@@ -19,9 +21,25 @@ function ProductoDetail() {
       .then((data) => {
         const found = data.find((p) => p.id === parseInt(productoId));
         setProducto(found);
+
+        // Cargar calificación previa si existe
+        const guardado = JSON.parse(localStorage.getItem(`review-${productoId}`));
+        if (guardado) {
+          setCalificacion(guardado.calificacion);
+          setComentario(guardado.comentario);
+        }
       })
       .catch((error) => console.error("Error al cargar datos:", error));
   }, [productoId]);
+
+  const manejarEnvio = () => {
+    const data = {
+      calificacion,
+      comentario
+    };
+    localStorage.setItem(`review-${productoId}`, JSON.stringify(data));
+    alert(intl.formatMessage({ id: "productos.mensajeGuardado" }));
+  };
 
   if (!producto) {
     return <div className="productos-container">Cargando...</div>;
@@ -58,16 +76,36 @@ function ProductoDetail() {
 
       <div className="producto-detail-right">
         <h3><FormattedMessage id="productos.calificar" /></h3>
-        <div className="estrellas">
+
+        <div className="estrellas" data-testid="estrellas-interactivas">
           {[1, 2, 3, 4, 5].map((star) => (
-            <span key={star}>⭐</span>
+            <span
+              key={star}
+              onClick={() => setCalificacion(star)}
+              style={{
+                cursor: "pointer",
+                fontSize: "2rem",
+                color: "#FFD700"
+              }}
+              data-testid={`estrella-${star}`}
+            >
+              {star <= calificacion ? "⭐" : "☆"}
+            </span>
           ))}
         </div>
+
+        <p>
+          <FormattedMessage id="productos.calificacion" />: {calificacion} / 5
+        </p>
+
         <textarea
           className="comentario"
           placeholder={intl.formatMessage({ id: "productos.comentario.placeholder" })}
+          value={comentario}
+          onChange={(e) => setComentario(e.target.value)}
         ></textarea>
-        <button className="btn-calificar">
+
+        <button className="btn-calificar" onClick={manejarEnvio}>
           <FormattedMessage id="productos.calificar.boton" />
         </button>
       </div>

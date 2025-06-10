@@ -1,4 +1,3 @@
-/* --- Contenedor general --- */
 .productos-container {
   background-color: #d5cea3;
   min-height: 100vh;
@@ -6,7 +5,6 @@
   box-sizing: border-box;
 }
 
-/* --- Título principal --- */
 .productos-titulo {
   font-size: 2rem;
   margin-bottom: 2rem;
@@ -15,7 +13,6 @@
   font-family: 'Maven Pro', sans-serif;
 }
 
-/* --- Filtros y búsqueda --- */
 .productos-filtros {
   display: flex;
   justify-content: center;
@@ -40,7 +37,6 @@
   background-color: white;
 }
 
-/* --- Grid de productos --- */
 .productos {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -48,9 +44,8 @@
   box-sizing: border-box;
 }
 
-/* --- Card de producto --- */
 .producto-card {
-  background-color: #a06c3f;
+  background-color: #7a4f2a;
   color: white;
   width: 100%;
   padding: 0.8rem;
@@ -68,7 +63,6 @@
   margin-bottom: 1rem;
 }
 
-/* --- Imagen del producto --- */
 .producto-img {
   width: 100%;
   height: 180px;
@@ -77,7 +71,6 @@
   margin-bottom: 1rem;
 }
 
-/* --- Placeholder para imagen faltante --- */
 .producto-img-placeholder {
   width: 100%;
   height: 180px;
@@ -91,14 +84,12 @@
   font-style: italic;
 }
 
-/* --- Estrellas (si usas ratings) --- */
 .estrellas {
   font-size: 1.2rem;
   color: black;
   margin: 0.5rem 0;
 }
 
-/* --- Precio y descripción --- */
 .precio {
   font-size: 1rem;
   font-weight: bold;
@@ -110,7 +101,6 @@
   line-height: 1.5;
 }
 
-/* --- Botones dentro de la card --- */
 .botones-producto {
   display: flex;
   flex-direction: column;
@@ -119,7 +109,6 @@
   align-items: center;
 }
 
-/* --- Botón de añadir al carrito --- */
 .boton-carrito {
   background-color: #3c2a21;
   color: white;
@@ -139,7 +128,6 @@
   background-color: #2f211a;
 }
 
-/* --- Link tipo botón "Ver más" --- */
 .boton-info {
   background-color: #d5cea3;
   color: #333;
@@ -159,7 +147,6 @@
   background-color: #c4b991;
 }
 
-/* --- Vista Detallada --- */
 .producto-detail-container {
   background-color: #d5cea3;
   min-height: 100vh;
@@ -186,7 +173,7 @@
 
 .producto-detail-right {
   flex: 1;
-  background-color: #a06c3f;
+  background-color: #7a4f2a;
   padding: 2rem;
   border-radius: 2rem;
   color: white;
@@ -238,7 +225,7 @@
 }
 
 .producto-imagen-contenedor {
-  background-color: #3c2a21; /* mismo color que btn-volver */
+  background-color: #3c2a21; 
   border-radius: 10px;
   padding: 1rem;
   margin-bottom: 1rem;
@@ -260,7 +247,7 @@
 
 .modal-contenido {
   background-color: #fff;
-  color: #000; /* 👈 Añadido para texto negro */
+  color: #000; 
   padding: 2rem;
   border-radius: 1rem;
   text-align: center;
@@ -306,11 +293,11 @@
 
 .carrito-flotante {
   position: fixed;
-  top: 120px; /* ajusta según navbar */
+  top: 120px;
   right: 30px;
-  background-color: #ffffff; /* fondo blanco */
-  color: #3c2a21; /* texto en color navbar */
-  border: 4px solid #3c2a21; /* borde grueso color navbar */
+  background-color: #ffffff; 
+  color: #3c2a21; 
+  border: 4px solid #3c2a21; 
   padding: 1.5rem;
   border-radius: 1.5rem;
   box-shadow: 0 4px 8px rgba(0,0,0,0.3);

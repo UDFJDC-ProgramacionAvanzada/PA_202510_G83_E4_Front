@@ -1,4 +1,3 @@
-/* Importar la fuente Maven Pro desde Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;700&display=swap');
 
 body {
@@ -25,7 +24,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 100px; /* 👈 Este margen separa el formulario del navbar */
+  margin-top: 100px; 
 }
 
 
@@ -36,7 +35,7 @@ body {
 }
 
 .registro-form label {
-  align-self: flex-start; /* Alineamos las etiquetas a la izquierda */
+  align-self: flex-start; 
   margin-top: 15px;
   margin-bottom: 5px;
   font-weight: bold;
@@ -55,11 +54,11 @@ body {
 }
 
 .registro-form button {
-  width: 50%; /* Más pequeño */
+  width: 50%; 
   background-color: #1A120B;
   color: #fff;
   border: none;
-  padding: 8px 0; /* Botón más pequeño verticalmente */
+  padding: 8px 0;
   margin-top: 20px;
   border-radius: 8px;
   cursor: pointer;
@@ -79,11 +78,11 @@ body {
   background-image: url('../Images/registro-mujer.webp');
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center top; /* Muestra la parte superior */
+  background-position: center top;
   filter: blur(2px);
   z-index: 0;
   opacity: 0.6;
-  transform: translateY(1%); /* Baja la imagen para que se vea desde la mitad hacia arriba */
+  transform: translateY(1%); 
 }
 
 
@@ -93,3 +92,24 @@ body {
   z-index: 1;
   background-color: rgba(60, 42, 33, 0.95);
 }
+
+.registro-form select {
+  width: 100%;
+  padding: 10px;
+  background-color: #d8c99b;
+  color: #3e2c1b;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg fill='%233e2c1b' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px 16px;
+  margin-top: 5px;
+  padding-right: 2rem; 
+}
+
