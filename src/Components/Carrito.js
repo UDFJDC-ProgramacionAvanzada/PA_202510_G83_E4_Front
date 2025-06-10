@@ -60,7 +60,7 @@ function Carrito() {
             <p className="cantidad-total">
               <strong>Productos:</strong> {calcularCantidadTotal()}
             </p>
-            <button className="btn-volver">Comprar</button>
+            <button className="btn-volver" onClick={() => window.location.href = '/compra'}>Comprar</button>
           </div>
 
           <section className="productos">

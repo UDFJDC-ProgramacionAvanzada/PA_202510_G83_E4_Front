@@ -22,7 +22,9 @@ function Home() {
           <Link to="/tienda" className="btn-compra">
             Ver los productos
           </Link>
-          <button className="btn-compra">Vender un producto</button>
+          <Link to="/registro-producto" className="btn-compra">
+            Vender mis productos  
+          </Link>
         </div>
       </div>
     </section>

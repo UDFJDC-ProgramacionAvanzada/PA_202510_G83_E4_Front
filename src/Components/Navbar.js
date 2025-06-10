@@ -21,7 +21,7 @@ function Navbar() {
       <div className="navbar-right">
         <img src={iniciarSesion} alt="Iniciar Sesión" className="icono-user" />
         <a href="#">Iniciar Sesión</a>
-        <a href="#">Registrarse</a>
+        <Link to="/formulario">Registrarse</Link>
         <Link to="/carrito">
           <img src={carrito} alt="Carrito de Compras" className="icono-carrito" />
         </Link>
